@@ -1,12 +1,10 @@
 'use strict';
 
-
 var assert = require('assert');
 
 var ndarray = require('ndarray'),
     ops = require('ndarray-ops'),
     cwise = require('cwise');
-
 
 var innerproduct = cwise({
   args:["array", "array"],
@@ -20,7 +18,6 @@ var innerproduct = cwise({
     return this.sum;
   }
 });
-
 
 var axpy = cwise({
   args:["scalar", "array", "array"],

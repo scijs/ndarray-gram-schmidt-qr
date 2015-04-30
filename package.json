@@ -2,7 +2,7 @@
   "name": "ndarray-gram-schmidt",
   "version": "0.0.0",
   "description": "Modified Gram-Schmidt Algorithm for QR Factorization",
-  "main": "qr.js",
+  "main": "gram-schmidt.js",
   "author": "Ricky Reusser",
   "license": "MIT",
   "scripts": {
