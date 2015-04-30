@@ -48,7 +48,7 @@ module.exports = function modifiedGramSchmidtQR( A, R ) {
 
     // rii = ||vi||
     rii = ops.norm2( vi );
-    if( rii===0 ) { return false; } // Bail if rii == 0
+    if( rii===0 ) { return false; }
     R.set(i, i, rii);
 
     // qi = vi/rii
