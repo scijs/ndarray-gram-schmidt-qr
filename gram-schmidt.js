@@ -32,8 +32,8 @@ module.exports = function modifiedGramSchmidtQR( A, R ) {
 
   assert(A.dimension == 2);
 
-  var m = A.shape[0];
-  var n = A.shape[1];
+  var n = A.shape[0];
+  var m = A.shape[1];
 
   for( i=0; i<n; i++ ) {
 
