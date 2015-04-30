@@ -26,6 +26,13 @@ var ndaxpy = cwise({
   }
 });
 
+var ndcpsc = cwise({
+  args:["scalar", "array", "array"],
+  body: function(alpha, x, y) {
+    y = alpha * x;
+  }
+});
+
 module.exports = function modifiedGramSchmidtQR( A, R ) {
 
   var i,j, rii, vi, qi, vj, rij;
@@ -47,8 +54,7 @@ module.exports = function modifiedGramSchmidtQR( A, R ) {
 
     // qi = vi/rii
     qi = A.pick( null, i );
-    ops.assign( qi, vi );
-    ops.divseq( qi, rii );
+    ndcpsc( 1/rii, qi, vi );
 
     for( j=i+1; j<n; j++ ) {
       //rij = qi' * vj
