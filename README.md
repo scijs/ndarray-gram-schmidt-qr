@@ -1,4 +1,4 @@
-# ndarray-gram-schmidt
+# ndarray-gram-schmidt-qr
 
 [![Build Status](https://travis-ci.org/rreusser/ndarray-gram-schmidt.svg?branch=master)](https://travis-ci.org/rreusser/ndarray-gram-schmidt)
 
@@ -28,7 +28,7 @@ Currently only real number matrices are supported and only square matrices are t
 The algorithm currently only calculates the in-place QR decomposition and returns true on successful completion.
 
 ```
-var qr = require('ndarray-gram-schmidt'),
+var qr = require('ndarray-gram-schmidt-qr'),
     pool = require('ndarray-scratch');
 
 var A = ndarray( new Float64Array([1,2,7,4,5,1,7,4,9]), [3,3] );
