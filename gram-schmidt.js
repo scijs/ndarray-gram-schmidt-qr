@@ -54,7 +54,7 @@ module.exports = function modifiedGramSchmidtQR( A, R ) {
 
     // qi = vi/rii
     qi = A.pick( null, i );
-    ndcpsc( 1/rii, qi, vi );
+    ndcpsc( 1/rii, vi, qi );
 
     for( j=i+1; j<n; j++ ) {
       //rij = qi' * vj
