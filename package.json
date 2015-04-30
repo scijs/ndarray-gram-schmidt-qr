@@ -1,0 +1,33 @@
+{
+  "name": "ndarray-gram-schmidt",
+  "version": "0.0.0",
+  "description": "Modified Gram-Schmidt Algorithm for QR Factorization",
+  "main": "qr.js",
+  "author": "Ricky Reusser",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha",
+    "lint": "jshint lib/**.js"
+  },
+  "keywords": [
+    "gramschmidt",
+    "linearalgebra",
+    "matrix",
+    "qr",
+    "ndarray",
+    "scijs"
+  ],
+  "devDependencies": {
+    "chai": "*",
+    "jshint": "*",
+    "mocha": "*",
+    "ndarray-scratch": "^1.1.1",
+    "ndgemm": "0.0.0"
+  },
+  "dependencies": {
+    "cwise": "^1.0.5",
+    "ndarray": "^1.0.16",
+    "ndarray-ops": "^1.2.2",
+    "ndarray-scratch": "^1.1.1"
+  }
+}
