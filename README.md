@@ -23,7 +23,7 @@ Currently only real number matrices are supported and only square matrices are t
 
 ## Usage
 
-The algorithm currently only calculates the in-place QR decomposition.
+The algorithm currently only calculates the in-place QR decomposition and returns true on successful completion.
 
 ```
 var qr = require('ndarray-gram-schmidt'),
