@@ -5,6 +5,10 @@
   "main": "gram-schmidt.js",
   "author": "Ricky Reusser",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rreusser/ndarray-gram-schmidt.git"
+  },
   "scripts": {
     "test": "mocha",
     "lint": "jshint **.js"
