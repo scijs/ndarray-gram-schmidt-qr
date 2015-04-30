@@ -1,5 +1,5 @@
 {
-  "name": "ndarray-gram-schmidt",
+  "name": "ndarray-gram-schmidt-qr",
   "version": "0.0.1",
   "description": "Modified Gram-Schmidt Algorithm for QR Factorization",
   "main": "gram-schmidt.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rreusser/ndarray-gram-schmidt.git"
+    "url": "git://github.com/rreusser/ndarray-gram-schmidt-qr.git"
   },
   "scripts": {
     "test": "mocha",
