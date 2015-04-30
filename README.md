@@ -31,7 +31,7 @@ The algorithm currently only calculates the in-place QR decomposition and return
 var qr = require('ndarray-gram-schmidt'),
     pool = require('ndarray-scratch');
 
-var A = ndarray( new Float64Array([1,2,3,4,5,6,7,8,9]), [3,3] );
+var A = ndarray( new Float64Array([1,2,7,4,5,1,7,4,9]), [3,3] );
 var R = pool.zeros( A.shape, A.dtype );
 
 qr( A, R );
