@@ -6,7 +6,7 @@ A module for calculating the in-place [QR decomposition of a matrix](http://en.w
 
 ## Introduction
 
-The algorithm is the numerically stable variant of the QR decomposition as found on p. 58 of Trefethen and Bau's [Numerical Linear Algebra](http://www.amazon.com/Numerical-Linear-Algebra-Lloyd-Trefethen/dp/0898713617). The specific algorithm in pseudocode is:
+The algorithm is the numerically stable variant of the Gram-Schmidt QR decomposition as found on p. 58 of Trefethen and Bau's [Numerical Linear Algebra](http://www.amazon.com/Numerical-Linear-Algebra-Lloyd-Trefethen/dp/0898713617). In pseudocode, the algorithm is:
 
 ```
 for i = 1 to n
@@ -31,7 +31,7 @@ The algorithm currently only calculates the in-place QR decomposition and return
 var qr = require('ndarray-gram-schmidt'),
     pool = require('ndarray-scratch');
 
-var A = ndarray( new Float64Array([1,2,3,4,5,6,7,8,9]), [3,3] );
+var A = ndarray( new Float64Array([1,2,7,4,5,1,7,4,9]), [3,3] );
 var R = pool.zeros( A.shape, A.dtype );
 
 qr( A, R );
