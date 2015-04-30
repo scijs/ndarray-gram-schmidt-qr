@@ -6,7 +6,7 @@ var ndarray = require('ndarray'),
     ops = require('ndarray-ops'),
     cwise = require('cwise');
 
-var innerproduct = cwise({
+var nddot = cwise({
   args:["array", "array"],
   pre: function() {
     this.sum = 0;
@@ -19,7 +19,7 @@ var innerproduct = cwise({
   }
 });
 
-var axpy = cwise({
+var ndaxpy = cwise({
   args:["scalar", "array", "array"],
   body: function(alpha, x, y) {
     y += alpha * x;
@@ -53,11 +53,11 @@ module.exports = function modifiedGramSchmidtQR( A, R ) {
     for( j=i+1; j<n; j++ ) {
       //rij = qi' * vj
       vj = A.pick( null, j );
-      rij = innerproduct( qi, vj );
+      rij = nddot( qi, vj );
       R.set( i, j, rij );
 
       // vj = vj - rij * qi
-      axpy( -rij, qi, vj );
+      ndaxpy( -rij, qi, vj );
     }
   }
 
