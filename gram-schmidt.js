@@ -2,12 +2,11 @@
 
 var assert = require('assert');
 
-var ndarray = require('ndarray'),
-    ops = require('ndarray-ops'),
+var ops = require('ndarray-ops'),
     cwise = require('cwise');
 
 var nddot = cwise({
-  args:["array", "array"],
+  args:['array', 'array'],
   pre: function() {
     this.sum = 0;
   },
@@ -20,14 +19,14 @@ var nddot = cwise({
 });
 
 var ndaxpy = cwise({
-  args:["scalar", "array", "array"],
+  args:['scalar', 'array', 'array'],
   body: function(alpha, x, y) {
     y += alpha * x;
   }
 });
 
 var ndcpsc = cwise({
-  args:["scalar", "array", "array"],
+  args:['scalar', 'array', 'array'],
   body: function(alpha, x, y) {
     y = alpha * x;
   }
@@ -37,10 +36,10 @@ module.exports = function modifiedGramSchmidtQR( A, R ) {
 
   var i,j, rii, vi, qi, vj, rij;
 
-  assert(A.dimension == 2);
+  assert(A.dimension === 2);
 
   var n = A.shape[0];
-  var m = A.shape[1];
+  //var m = A.shape[1];
 
   for( i=0; i<n; i++ ) {
 

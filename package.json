@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha",
-    "lint": "jshint lib/**.js"
+    "lint": "jshint **.js"
   },
   "keywords": [
     "gramschmidt",
