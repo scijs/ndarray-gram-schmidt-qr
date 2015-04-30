@@ -14,7 +14,6 @@ describe("Gram-Schmidt QR", function() {
     var i,j;
     var n=3, m=3;
     var A = ndarray(new Float64Array([1,2,3,4.5,5,6,7,8,3]), [n,m]);
-    var Q = pool.zeros( A.shape, A.dtype );
     var R = pool.zeros( A.shape, A.dtype );
     var QR = pool.zeros( A.shape, A.dtype );
     var diff = pool.zeros( A.shape, A.dtype );
@@ -39,4 +38,15 @@ describe("Gram-Schmidt QR", function() {
 
   });
 
+  it('returns false if the factorization fails',function() {
+    var i,j;
+    var n=2, m=2;
+    var A = ndarray(new Float64Array([1,2,2,4]), [n,m]);
+    var R = pool.zeros( A.shape, A.dtype );
+
+    var success = qr(A, R);
+
+    assert(success === false);
+
+  });
 });
