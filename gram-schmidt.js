@@ -2,35 +2,8 @@
 
 var assert = require('assert');
 
-var ops = require('ndarray-ops'),
+var blas = require('ndarray-blas-level1'),
     cwise = require('cwise');
-
-var nddot = cwise({
-  args:['array', 'array'],
-  pre: function() {
-    this.sum = 0;
-  },
-  body: function(a,b) {
-    this.sum += a * b;
-  },
-  post: function() {
-    return this.sum;
-  }
-});
-
-var ndaxpy = cwise({
-  args:['scalar', 'array', 'array'],
-  body: function(alpha, x, y) {
-    y += alpha * x;
-  }
-});
-
-var ndcpsc = cwise({
-  args:['scalar', 'array', 'array'],
-  body: function(alpha, x, y) {
-    y = alpha * x;
-  }
-});
 
 module.exports = function modifiedGramSchmidtQR( A, R ) {
 
@@ -47,22 +20,22 @@ module.exports = function modifiedGramSchmidtQR( A, R ) {
     vi = A.pick( null, i );
 
     // rii = ||vi||
-    rii = ops.norm2( vi );
+    rii = blas.nrm2( vi );
     if( rii===0 ) { return false; }
     R.set(i, i, rii);
 
     // qi = vi/rii
     qi = A.pick( null, i );
-    ndcpsc( 1/rii, vi, qi );
+    blas.cpsc( 1/rii, vi, qi );
 
     for( j=i+1; j<n; j++ ) {
       //rij = qi' * vj
       vj = A.pick( null, j );
-      rij = nddot( qi, vj );
+      rij = blas.dot( qi, vj );
       R.set( i, j, rij );
 
       // vj = vj - rij * qi
-      ndaxpy( -rij, qi, vj );
+      blas.axpy( -rij, qi, vj );
     }
   }
 
