@@ -1,6 +1,6 @@
 # ndarray-gram-schmidt-qr
 
-[![Build Status](https://travis-ci.org/rreusser/ndarray-gram-schmidt-qr.svg?branch=master)](https://travis-ci.org/rreusser/ndarray-gram-schmidt-qr) [![npm version](https://badge.fury.io/js/ndarray-gram-schmidt-qr.svg)](http://badge.fury.io/js/ndarray-gram-schmidt-qr)
+[![Build Status](https://travis-ci.org/scijs/ndarray-gram-schmidt-qr.svg?branch=1.0.0)](https://travis-ci.org/scijs/ndarray-gram-schmidt-qr) [![npm version](https://badge.fury.io/js/ndarray-gram-schmidt-qr.svg)](http://badge.fury.io/js/ndarray-gram-schmidt-qr)
 
 A module for calculating the in-place [QR decomposition of a matrix](http://en.wikipedia.org/wiki/QR_decomposition)
 
