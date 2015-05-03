@@ -21,7 +21,7 @@ for i = 1 to n
     v_j = v_j - r_ij * q_i
 ```
 
-Currently only real number matrices are supported and only square matrices are tested.
+Only square matrices are currently tested. For complex numbers see [ndarray-gram-schmidt-qr-complex](https://github.com/scijs/ndarray-gram-schmidt-qr-complex).
 
 ## Usage
 
