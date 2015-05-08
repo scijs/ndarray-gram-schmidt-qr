@@ -1,6 +1,6 @@
 'use strict';
 
-var qr = require('../gram-schmidt.js'),
+var qr = require('../index.js'),
     assert = require('chai').assert,
     ndarray = require('ndarray'),
     pool = require('ndarray-scratch'),

@@ -1,15 +1,14 @@
 'use strict';
 
-var assert = require('assert');
-
-var blas = require('ndarray-blas-level1'),
-    cwise = require('cwise');
+var blas = require('ndarray-blas-level1');
 
 module.exports = function modifiedGramSchmidtQR( A, R ) {
 
   var i,j, rii, vi, qi, vj, rij;
 
-  assert(A.dimension === 2);
+  if( A.dimension !== 2 ) {
+    throw new TypeError('modifiedGramSchmidtQR():: Dimension of A must be 2');
+  }
 
   var n = A.shape[0];
   //var m = A.shape[1];
