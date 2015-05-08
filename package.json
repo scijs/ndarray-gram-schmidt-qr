@@ -1,13 +1,13 @@
 {
   "name": "ndarray-gram-schmidt-qr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Modified Gram-Schmidt Algorithm for QR Factorization",
   "main": "index.js",
   "author": "Ricky Reusser",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rreusser/ndarray-gram-schmidt-qr.git"
+    "url": "git://github.com/scijs/ndarray-gram-schmidt-qr.git"
   },
   "scripts": {
     "test": "mocha",
